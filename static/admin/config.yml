@@ -1,6 +1,7 @@
 backend:
   name: github
   repo: marteagam/poc-netlify-cms
+  branch: develop
 
 media_folder: static/img
 public_folder: /img
