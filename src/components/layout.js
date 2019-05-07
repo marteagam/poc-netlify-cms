@@ -3,13 +3,15 @@ import { Link } from "gatsby"
 
 import { rhythm, scale } from "../utils/typography"
 
+import NavBar from "./nav-bar"
+
 class Layout extends React.Component {
   render() {
     const { location, title, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
     let header
 
-    if (location.pathname === rootPath) {
+    if ((location && location.pathname) === rootPath) {
       header = (
         <h1
           style={{
@@ -60,6 +62,7 @@ class Layout extends React.Component {
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
       >
+        <NavBar />
         <header>{header}</header>
         <main>{children}</main>
         <footer>
