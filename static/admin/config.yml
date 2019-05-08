@@ -20,43 +20,13 @@ collections:
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
 
-  - name: "test"
-    label: "Test"
-    folder: "content/test"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    editor:
-     preview: false
-    fields:
-      - { label: Form Title, name: formTitle, widget: string }
-      - {
-          label: Form Description,
-          name: formDescription,
-          widget: text,
-          required: false,
-        }
-      - { label: Form Url, name: formUrl, widget: string, required: true }
-      - label: Form Fields
-        name: formFields
-        widget: list
-        fields:
-          - { label: Label, name: label, widget: string }
-          - { label: Placeholder, name: placeholder, widget: string }
-      - {
-          label: Button label,
-          name: buttonLabel,
-          widget: string,
-          required: true,
-        }
-
   - name: 'forms'
     label: 'Forms'
-    create: true
-    #delete: false # Prevent users from deleting documents in this collection
+    delete: false # Prevent users from deleting documents in this collection
     editor:
       preview: false
     files:
-      - file: 'content/forms/inscription.yml'
+      - file: 'content/forms/inscription.md'
         label: 'Inscription'
         name: 'inscription'
         fields:
