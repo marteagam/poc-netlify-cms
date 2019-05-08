@@ -1,9 +1,9 @@
 ---
-formTitle: 111efse
-formDescription: 222fsefsefsef
-formUrl: 3/fefesf
+formTitle: Formulario de inscripción
+formDescription: 
+formUrl: /form/techzone
 formFields:
-  - label: 4444sefs
-    placeholder: 5555fsefsefsef
-buttonLabel: 66666sefsef
+  - label: Nombre completo
+    placeholder: 
+buttonLabel: Registrar
 ---
