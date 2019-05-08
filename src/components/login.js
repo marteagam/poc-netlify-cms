@@ -26,27 +26,42 @@ class Login extends React.Component {
 
     return (
       <>
-        <h1>Log in</h1>
+        <h1>Iniciar sesión</h1>
         <form
           method="post"
           onSubmit={event => {
             this.handleSubmit(event)
             navigate(`/app/profile`)
           }}
+          style={{
+            maxWidth: `40%`
+          }}
         >
-          <label>
-            Username
+          <div 
+            style={{
+              display: `flex`,
+              flexDirection: `column`,
+              marginBottom: 15
+            }}
+          >
+            <label>Nombre de usuario</label>
             <input type="text" name="username" onChange={this.handleUpdate} />
-          </label>
-          <label>
-            Password
+          </div>
+          <div 
+            style={{
+              display: `flex`,
+              flexDirection: `column`,
+              marginBottom: 15
+            }}
+          >
+            <label>Contraseña</label>
             <input
               type="password"
               name="password"
               onChange={this.handleUpdate}
             />
-          </label>
-          <input type="submit" value="Log In" />
+          </div>
+          <input type="submit" value="Iniciar sesión" />
         </form>
       </>
     )

@@ -3,10 +3,11 @@ import { getUser } from "../services/auth"
 
 const Profile = () => (
   <>
-    <h1>Your profile</h1>
+    <h1>Tu perfil</h1>
     <ul>
-      <li>Name: {getUser().name}</li>
+      <li>Nombre: {getUser().name}</li>
       <li>E-mail: {getUser().email}</li>
+      <li>Rol: {getUser().role === 'client' ? 'Cliente' : 'Administrador'}</li>
     </ul>
   </>
 )

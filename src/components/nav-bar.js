@@ -5,9 +5,9 @@ import { getUser, isLoggedIn, logout } from "../services/auth"
 export default () => {
   const content = { message: "", login: true }
   if (isLoggedIn()) {
-    content.message = `Hello, ${getUser().name}`
+    content.message = `Hola, ${getUser().name}`
   } else {
-    content.message = "You are not logged in"
+    content.message = "Usted no se ha identificado"
   }
   return (
     <div
@@ -21,9 +21,13 @@ export default () => {
     >
       <span>{content.message}</span> 
       <nav>
-        <Link to="/">Home</Link>
+        <Link to="/">Inicio</Link>
         {` `}
-        <Link to="/app/profile">Profile</Link> 
+        <Link to="/app/profile">Perfil</Link> 
+        {` `}
+        <Link to="/app/form-inscription">Inscripción</Link>
+        {` `}
+        <Link to="/app/inscriptions">Inscripciones</Link> 
         {` `}
         {isLoggedIn() ? (
           <a
@@ -33,7 +37,7 @@ export default () => {
               logout(() => navigate(`/app/login`))
             }}
           >
-            Logout
+            Salir
           </a>
         ) : null}
       </nav>
