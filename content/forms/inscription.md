@@ -5,27 +5,27 @@ formFields:
   - label: Nombre completo
     placeholder: ''
   - label: Correo electrónico
-    placeholder: ' Correo electrónico'
+    placeholder: ''
   - label: Teléfono
-    placeholder: ' Teléfono'
+    placeholder: ''
   - label: Ciudad
-    placeholder: ' Ciudad'
+    placeholder: ' '
   - label: ¿Cuál es tu ocupación?
-    placeholder: ' ¿Cuál es tu ocupación?'
+    placeholder: ''
   - label: Empresa en la que trabajas
-    placeholder: ' Empresa en la que trabajas'
+    placeholder: ''
   - label: Cargo
-    placeholder: Cargo
+    placeholder: ''
   - label: Tiempo de experiencia en años
-    placeholder: Tiempo de experiencia en años
+    placeholder: ''
   - label: Paquete
-    placeholder: Paquete
+    placeholder: ''
   - label: Nombre para la factura
-    placeholder: Nombre para la factura
+    placeholder: ''
   - label: NIT ó CI para factura
-    placeholder: NIT ó CI para factura
-  - label: Código de boleta de depósito bancario
-    placeholder: ' Código de boleta de depósito bancario'
+    placeholder: ''
+  - label: ' Código de boleta de depósito bancario'
+    placeholder: ''
 buttonLabel: Registrar
 ---
 
