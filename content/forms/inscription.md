@@ -3,7 +3,7 @@ formTitle: Formulario de inscripción
 formUrl: /form/techzone
 formFields:
   - label: Nombre completo
-    placeholder: ' Nombre completo'
+    placeholder: ''
   - label: Correo electrónico
     placeholder: ' Correo electrónico'
   - label: Teléfono
