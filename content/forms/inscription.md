@@ -4,56 +4,56 @@ formDescription: ''
 formUrl: /form/techzone
 sections:
   - formFields:
-      - label: Nombre completo
+      - infoLabel: ''
+        label: Nombre completo
+        name: name
         placeholder: ''
-        name: 'name'
-        infoLabel: ''
-      - label: Correo electrónico
+      - infoLabel: ''
+        label: Correo electrónico
+        name: email
         placeholder: ''
-        name: 'email'
-        infoLabel: ''
-      - label: Teléfono
+      - infoLabel: ''
+        label: Teléfono
+        name: phone
         placeholder: ''
-        name: 'phone'
-        infoLabel: ''
-      - label: Ciudad
+      - infoLabel: ''
+        label: Ciudad
+        name: city
         placeholder: ''
-        name: 'city'
-        infoLabel: ''
-      - label: ¿Cuál es tu ocupación?
+      - infoLabel: ''
+        label: ¿Cuál es tu ocupación?
+        name: occupation
         placeholder: ''
-        name: 'occupation'
-        infoLabel: ''
-      - label: Empresa en la que trabajas
+      - infoLabel: ''
+        label: Empresa en la que trabajas
+        name: company
         placeholder: ''
-        name: 'company'
-        infoLabel: ''
-      - label: Cargo
+      - infoLabel: ''
+        label: Cargo
+        name: position
         placeholder: ''
-        name: 'position'
-        infoLabel: ''
-      - label: Tiempo de experiencia en años
+      - infoLabel: ''
+        label: Tiempo de experiencia en años
+        name: experience
         placeholder: ''
-        name: 'experience'
-        infoLabel: ''
-    sectionTitle: DATOS PERSONALES
+    sectionTitle: DATOS PERSONALES222
   - formFields:
-      - label: Paquete
+      - infoLabel: ''
+        label: Paquete
+        name: package
         placeholder: ''
-        name: 'package'
-        infoLabel: ''
-      - label: Nombre para la factura
+      - infoLabel: ''
+        label: Nombre para la factura
+        name: nameBill
         placeholder: ''
-        name: 'nameBill'
-        infoLabel: ''
-      - label: NIT ó CI para factura
+      - infoLabel: ''
+        label: NIT ó CI para factura
+        name: ci
         placeholder: ''
-        name: 'ci'
-        infoLabel: ''
-      - label: Código de boleta de depósito bancario
+      - infoLabel: ''
+        label: Código de boleta de depósito bancario
+        name: voucher
         placeholder: ''
-        name: 'voucher'
-        infoLabel: ''
     sectionTitle: DATOS DE INSCRIPCIÓN
 buttonLabel: Registrar
 ---
