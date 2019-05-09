@@ -38,12 +38,17 @@ collections:
               required: false,
             }
           - { label: Form Url, name: formUrl, widget: string, required: true }
-          - label: Form Fields
-            name: formFields
+          - label: Sections
+            name: sections
             widget: list
             fields:
-              - { label: Label, name: label, widget: string }
-              - { label: Placeholder, name: placeholder, widget: string }
+              - { label: Section Title, name: sectionTitle, widget: string }
+              - label: Form Fields
+                name: formFields
+                widget: list
+                fields:
+                  - { label: Label, name: label, widget: string, required: false }
+                  - { label: Placeholder, name: placeholder, widget: string, required: false }
           - {
               label: Button label,
               name: buttonLabel,
