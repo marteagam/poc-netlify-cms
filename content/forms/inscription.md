@@ -36,7 +36,7 @@ sections:
         label: Tiempo de experiencia en años
         name: experience
         placeholder: ''
-    sectionTitle: DATOS PERSONALES222
+    sectionTitle: DATOS PERSONALES
   - formFields:
       - infoLabel: ''
         label: Paquete
