@@ -31,12 +31,13 @@ class FormInscription extends React.Component {
   }
 
   render() {
-    const form = this.props.data
-    console.log('form: ', form);
+    const data = this.props.data
+    console.log('form: ', data);
 
     return (
       <>
-        <h1>Formulario de inscripción</h1>
+        <h1>{data.form.frontmatter.formTitle}</h1>
+        <p>{data.form.frontmatter.formDescription}</p>
         <form
           method="post"
           onSubmit={event => {
@@ -248,6 +249,7 @@ export default props => (
         form: markdownRemark(fields: { slug: { eq: "/inscription/" } }) {
           frontmatter {
             formTitle
+            formDescription
             formUrl
             sections {
               formFields {

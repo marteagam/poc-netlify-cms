@@ -36,6 +36,7 @@ collections:
               name: formDescription,
               widget: text,
               required: false,
+              default: '',
             }
           - { label: Form Url, name: formUrl, widget: string, required: true }
           - label: Sections
@@ -47,8 +48,8 @@ collections:
                 name: formFields
                 widget: list
                 fields:
-                  - { label: Label, name: label, widget: string, required: false }
-                  - { label: Placeholder, name: placeholder, widget: string, required: false }
+                  - { label: Label, name: label, widget: string, required: false, default: '', }
+                  - { label: Placeholder, name: placeholder, widget: string, required: false, default: '', }
           - {
               label: Button label,
               name: buttonLabel,
