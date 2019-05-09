@@ -31,13 +31,17 @@ class FormInscription extends React.Component {
   }
 
   render() {
-    const data = this.props.data
-    console.log('form: ', data);
+    const { 
+      formTitle, 
+      formDescription,
+      sections
+    } = this.props.data.form.frontmatter
+    console.log('sections: ', sections);
 
     return (
       <>
-        <h1>{data.form.frontmatter.formTitle}</h1>
-        <p>{data.form.frontmatter.formDescription}</p>
+        <h1>{formTitle}</h1>
+        <p>{formDescription}</p>
         <form
           method="post"
           onSubmit={event => {
@@ -45,7 +49,94 @@ class FormInscription extends React.Component {
             navigate(`/success-inscription`)
           }}
         >
-          <h4
+          {sections.map((section, key) => {
+              const { sectionTitle, formFields } = section;
+              return (
+                <React.Fragment key={key}>
+                  <h4
+                    style={{
+                      color: '#B62940'
+                    }}
+                  >
+                    {sectionTitle}
+                  </h4>
+                  <div 
+                    style={{
+                      paddingLeft: 50
+                    }}
+                  >
+                    {formFields.map((field, key) => 
+                      <React.Fragment key={key}>
+                        { field.name !== "occupation" && 
+                          <div 
+                            style={{
+                              display: `flex`,
+                              flexDirection: `column`,
+                              marginBottom: 15
+                            }}
+                          >
+                            <label>{field.label}</label>
+                            { field.name === "experience" && 
+                              <select name="experience" onChange={this.handleUpdate} value={this.state.experience}>
+                                <option value="< 1 año">{'< 1 año'}</option>
+                                <option value="1 a 5 años">1 a 5 años</option>
+                                <option value="5 a 10 años">5 a 10 años</option>
+                                <option value="> 10 años">> 10 años</option>
+                              </select>
+                            }
+                            { field.name === "package" && 
+                              <select name="package" onChange={this.handleUpdate} value={this.state.package}>
+                                <option value="TZ Xplorer">TZ Xplorer ( Bs. 249 )</option>
+                              </select>
+                            }
+                            { field.name !== "experience" && field.name !== "package" && 
+                              <input type="text" name={field.name} placeholder={field.placeholder} onChange={this.handleUpdate} />
+                            }
+                            <p
+                              style={{
+                                color: '#B62940',
+                                fontSize: 12,
+                                margin: 0
+                              }}
+                            >
+                              {field.infoLabel}
+                            </p>
+                          </div>
+                        }
+                        { field.name === "occupation" && 
+                          <div 
+                            style={{
+                              marginBottom: 15
+                            }}
+                            onChange={this.handleUpdate}
+                          >
+                            <h5 
+                              style={{
+                                marginBottom: 10,
+                                marginTop: 10,
+                              }}
+                            >
+                              {field.infoLabel}
+                            </h5>
+                            <label>
+                              Profesional
+                              <input type="radio" value="professional" name="occupation" />
+                            </label>
+                            {` `}
+                            <label>
+                              Estudiante
+                              <input type="radio" value="student" name="occupation" />
+                            </label>
+                          </div>
+                        }
+                      </React.Fragment>
+                    )}
+                  </div>
+                </React.Fragment>
+              )
+            })
+          }
+          {/* <h4
             style={{
               color: '#B62940'
             }}
@@ -234,7 +325,7 @@ class FormInscription extends React.Component {
               <label>Código de boleta de depósito bancario</label>
               <input type="text" name="voucher" onChange={this.handleUpdate} />
             </div>
-          </div>
+          </div> */}
           <input type="submit" value="Registrar" />
         </form>
       </>
@@ -249,8 +340,10 @@ export default props => (
         form: markdownRemark(fields: { slug: { eq: "/inscription/" } }) {
           frontmatter {
             formTitle
+            formDescription
             formUrl
             sections {
+              sectionTitle
               formFields {
                 label
                 placeholder
