@@ -2,8 +2,7 @@
 formTitle: Formulario de inscripción
 formUrl: /form/techzone
 sections:
-  - sectionTitle: Title
-    formFields:
+  - formFields:
       - label: Nombre completo
         placeholder: ''
       - label: Correo electrónico
@@ -20,14 +19,13 @@ sections:
         placeholder: ''
       - label: Tiempo de experiencia en años
         placeholder: ''
+    sectionTitle: DATOS PERSONALES
+  - formFields:
       - label: Paquete
-        placeholder: ''
       - label: Nombre para la factura
-        placeholder: ''
       - label: NIT ó CI para factura
-        placeholder: ''
-      - label: ' Código de boleta de depósito bancario'
-        placeholder: ''
+      - label: Código de boleta de depósito bancario
+    sectionTitle: DATOS DE INSCRIPCIÓN
 buttonLabel: Registrar
 ---
 
