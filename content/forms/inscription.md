@@ -1,5 +1,6 @@
 ---
 formTitle: Formulario de inscripción
+formDescription: ''
 formUrl: /form/techzone
 sections:
   - formFields:
