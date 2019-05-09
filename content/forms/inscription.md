@@ -23,9 +23,13 @@ sections:
     sectionTitle: DATOS PERSONALES
   - formFields:
       - label: Paquete
+        placeholder: ''
       - label: Nombre para la factura
+        placeholder: ''
       - label: NIT ó CI para factura
+        placeholder: ''
       - label: Código de boleta de depósito bancario
+        placeholder: ''
     sectionTitle: DATOS DE INSCRIPCIÓN
 buttonLabel: Registrar
 ---

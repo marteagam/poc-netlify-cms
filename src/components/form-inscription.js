@@ -249,7 +249,6 @@ export default props => (
         form: markdownRemark(fields: { slug: { eq: "/inscription/" } }) {
           frontmatter {
             formTitle
-            formDescription
             formUrl
             sections {
               formFields {
