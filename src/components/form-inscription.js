@@ -1,6 +1,6 @@
 import React from "react"
 import { handleInscription } from "../services/inscription"
-import { navigate } from "gatsby"
+import { navigate, StaticQuery, graphql} from "gatsby"
 
 class FormInscription extends React.Component {
   state = {
@@ -31,6 +31,8 @@ class FormInscription extends React.Component {
   }
 
   render() {
+    const form = this.props.data
+    console.log('form: ', form);
 
     return (
       <>
@@ -239,4 +241,25 @@ class FormInscription extends React.Component {
   }
 }
 
-export default FormInscription
+export default props => (
+  <StaticQuery
+    query={graphql`
+      query {
+        form: markdownRemark(fields: { slug: { eq: "/inscription/" } }) {
+          frontmatter {
+            formTitle
+            formUrl
+            sections {
+              formFields {
+                label
+                placeholder
+              }
+            }
+            buttonLabel
+          }
+        }
+      }
+    `}
+    render={data => <FormInscription data={data} {...props} />}
+  />
+)
