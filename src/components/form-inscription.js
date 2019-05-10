@@ -27,20 +27,19 @@ class FormInscription extends React.Component {
   handleSubmit = event => {
     event.preventDefault()
     handleInscription(this.state)
-    console.log('form data', this.state)
   }
 
   render() {
     const { 
-      formTitle, 
-      formDescription,
+      title, 
+      description,
       sections
-    } = this.props.data.form.frontmatter
+    } = this.props.data.strapi.form
 
     return (
       <>
-        <h1>{formTitle}</h1>
-        <p>{formDescription}</p>
+        <h1>{title}</h1>
+        <p>{description}</p>
         <form
           method="post"
           onSubmit={event => {
@@ -49,7 +48,7 @@ class FormInscription extends React.Component {
           }}
         >
           {sections.map((section, key) => {
-              const { sectionTitle, formFields } = section;
+              const { title, inputs } = section;
               return (
                 <React.Fragment key={key}>
                   <h4
@@ -57,14 +56,14 @@ class FormInscription extends React.Component {
                       color: '#B62940'
                     }}
                   >
-                    {sectionTitle}
+                    {title}
                   </h4>
                   <div 
                     style={{
                       paddingLeft: 50
                     }}
                   >
-                    {formFields.map((field, key) => 
+                    {inputs.map((field, key) => 
                       <React.Fragment key={key}>
                         { field.name !== "occupation" && 
                           <div 
@@ -145,25 +144,23 @@ class FormInscription extends React.Component {
 export default props => (
   <StaticQuery
     query={graphql`
-      query {
-        form: markdownRemark(fields: { slug: { eq: "/inscription/" } }) {
-          frontmatter {
-            formTitle
-            formDescription
-            formUrl
-            sections {
-              sectionTitle
-              formFields {
-                label
-                placeholder
-                name
-                infoLabel
-              }
+    query {
+      strapi {
+        form(id: "1"){
+          title
+          description
+          sections {
+            title
+            inputs {
+              label
+              placeholder
+              name
+              infoLabel
             }
-            buttonLabel
           }
         }
       }
+    }
     `}
     render={data => <FormInscription data={data} {...props} />}
   />

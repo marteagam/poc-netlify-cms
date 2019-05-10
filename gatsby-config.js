@@ -31,6 +31,29 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-source-graphql",
+      options: {
+        // This type will contain remote schema Query type
+        typeName: "STRAPI",
+        // This is field under which it's accessible
+        fieldName: "strapi",
+        // Url to query from
+        url: "http://localhost:1337/graphql",
+      },
+    },
+    // {
+    //   resolve: 'gatsby-source-strapi',
+    //   options: {
+    //     apiURL: 'http://localhost:1337',
+    //     contentTypes: [ // List of the Content Types you want to be able to request from Gatsby.
+    //       'forms',
+    //       'inputs',
+    //       'sections'
+    //     ],
+    //     queryLimit: 1000,
+    //   },
+    // },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
