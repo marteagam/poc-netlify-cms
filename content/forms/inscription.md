@@ -1,5 +1,5 @@
 ---
-formTitle: Formulario de inscripción
+formTitle: Formulario de inscripción2
 formDescription: ''
 formUrl: /form/techzone
 sections:
