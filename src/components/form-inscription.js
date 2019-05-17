@@ -30,11 +30,13 @@ class FormInscription extends React.Component {
   }
 
   render() {
+    const parent = this.props.data[Object.keys(this.props.data)[0]];
+    const child = parent[Object.keys(parent)[0]];
     const { 
       title, 
       description,
       sections
-    } = this.props.data.form.frontmatter
+    } = child
 
     return (
       <>
