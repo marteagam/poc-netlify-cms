@@ -27,7 +27,6 @@ class FormInscription extends React.Component {
   handleSubmit = event => {
     event.preventDefault()
     handleInscription(this.state)
-    console.log('form data', this.state)
   }
 
   render() {
