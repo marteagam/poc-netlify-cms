@@ -32,15 +32,15 @@ class FormInscription extends React.Component {
 
   render() {
     const { 
-      formTitle, 
-      formDescription,
+      title, 
+      description,
       sections
     } = this.props.data.form.frontmatter
 
     return (
       <>
-        <h1>{formTitle}</h1>
-        <p>{formDescription}</p>
+        <h1>{title}</h1>
+        <p>{description}</p>
         <form
           method="post"
           onSubmit={event => {
@@ -49,7 +49,7 @@ class FormInscription extends React.Component {
           }}
         >
           {sections.map((section, key) => {
-              const { sectionTitle, formFields } = section;
+              const { title, inputs } = section;
               return (
                 <React.Fragment key={key}>
                   <h4
@@ -57,14 +57,14 @@ class FormInscription extends React.Component {
                       color: '#B62940'
                     }}
                   >
-                    {sectionTitle}
+                    {title}
                   </h4>
                   <div 
                     style={{
                       paddingLeft: 50
                     }}
                   >
-                    {formFields.map((field, key) => 
+                    {inputs.map((field, key) => 
                       <React.Fragment key={key}>
                         { field.name !== "occupation" && 
                           <div 
@@ -148,12 +148,12 @@ export default props => (
       query {
         form: markdownRemark(fields: { slug: { eq: "/inscription/" } }) {
           frontmatter {
-            formTitle
-            formDescription
-            formUrl
+            title
+            description
+            url
             sections {
-              sectionTitle
-              formFields {
+              title
+              inputs {
                 label
                 placeholder
                 name

@@ -30,22 +30,22 @@ collections:
         label: 'Inscription'
         name: 'inscription'
         fields:
-          - { label: Form Title, name: formTitle, widget: string }
+          - { label: Form Title, name: title, widget: string }
           - {
               label: Form Description,
-              name: formDescription,
+              name: description,
               widget: text,
               required: false,
               default: '',
             }
-          - { label: Form Url, name: formUrl, widget: string, required: true }
+          - { label: Form Url, name: url, widget: string, required: true }
           - label: Sections
             name: sections
             widget: list
             fields:
-              - { label: Section Title, name: sectionTitle, widget: string }
-              - label: Form Fields
-                name: formFields
+              - { label: Section Title, name: title, widget: string }
+              - label: Form Inputs
+                name: inputs
                 widget: list
                 fields:
                   - { label: Label, name: label, widget: string, required: false, default: '', }
