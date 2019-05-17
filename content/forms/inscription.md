@@ -1,9 +1,9 @@
 ---
-formTitle: Formulario de inscripción
-formDescription: ''
-formUrl: /form/techzone
+title: Formulario de inscripción
+description: ''
+url: /form/techzone
 sections:
-  - formFields:
+  - inputs:
       - infoLabel: ''
         label: Nombre completo
         name: name
@@ -36,8 +36,8 @@ sections:
         label: Tiempo de experiencia en años
         name: experience
         placeholder: ''
-    sectionTitle: DATOS PERSONALES
-  - formFields:
+    title: DATOS PERSONALES
+  - inputs:
       - infoLabel: ''
         label: Paquete
         name: package
@@ -54,7 +54,7 @@ sections:
         label: Código de boleta de depósito bancario
         name: voucher
         placeholder: ''
-    sectionTitle: DATOS DE INSCRIPCIÓN
+    title: DATOS DE INSCRIPCIÓN
 buttonLabel: Registrar
 ---
 
