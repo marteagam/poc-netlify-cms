@@ -1,5 +1,5 @@
 ---
-title: Formulario de inscripción
+title: Formulario de inscripción - By Netlify
 description: ''
 submitUrl: /form/techzone
 sections:
