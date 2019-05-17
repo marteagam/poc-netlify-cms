@@ -1,7 +1,7 @@
 ---
 title: Formulario de inscripción
 description: ''
-url: /form/techzone
+submitUrl: /form/techzone
 sections:
   - inputs:
       - infoLabel: ''

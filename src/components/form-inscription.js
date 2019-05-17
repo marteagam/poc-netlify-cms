@@ -149,7 +149,7 @@ export default props => (
           frontmatter {
             title
             description
-            url
+            submitUrl
             sections {
               title
               inputs {

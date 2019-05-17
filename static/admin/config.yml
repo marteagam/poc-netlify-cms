@@ -38,7 +38,7 @@ collections:
               required: false,
               default: '',
             }
-          - { label: Form Url, name: url, widget: string, required: true }
+          - { label: Form Url, name: submitUrl, widget: string, required: true }
           - label: Sections
             name: sections
             widget: list
