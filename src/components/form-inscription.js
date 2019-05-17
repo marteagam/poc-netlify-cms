@@ -149,6 +149,7 @@ export default props => (
         form(id: "1"){
           title
           description
+          submitUrl
           sections {
             title
             inputs {
